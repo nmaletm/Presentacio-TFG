@@ -1,0 +1,27 @@
+.reveal .state-background {
+	background: #fff;
+}
+
+.reveal .state-background .logo{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 90px;
+	width: 529px;
+	background-image: url('logo_inlab.png');
+	background-position: 90% 10%;
+	background-repeat: no-repeat; 
+}
+
+
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+	text-transform: none;
+}
+
+.video-demo{
+	min-width: 600px;
+	min-height: 400px;
+	max-width: 80%;
+	max-width: 80%;
+}
