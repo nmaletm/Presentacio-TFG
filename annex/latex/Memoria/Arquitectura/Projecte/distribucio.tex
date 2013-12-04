@@ -1,0 +1,21 @@
+
+\subsection{Distribució de l'aplicació}
+
+Al tractar-se d'una aplicació iOS, el procés de distribució esta definit per \textit{Apple}. A més en aquest project s'utilitza la plataforma \textit{TestFlightApp}\footnote{Sistema de distribució de versions \textit{beta} de l'aplicació. \url{https://testflightapp.com/}} per a realitzar proves amb usuaris reals. Els passos per a desplegar una versió de l'aplicació son els següents:
+
+\begin{enumerate}
+    \item Instal·lar la versió al dispositiu a través del cable USB, i verificar el correcte funcionament.
+    \item Distribuir la versió mitjançant \textit{TestFlightApp} per a que un grup d'usuari reduït (20-30 usuaris) verifiquin el correcte funcionament de la versió.
+    \item Enviar la versió al sistema de distribució d'\textit{Apple}.
+    \item Un cop \textit{Apple} revisa i accepta la versió, es distribueix mitjançant l'\textit{App Store} d'\textit{Apple}.
+\end{enumerate}
+
+Per tant hi han tres canals per a instal·lar l'aplicació a un dispositiu, a través de l'\textit{App Store} d'\textit{Apple}, a través de \textit{TestFlightApp} o mitjançant un cable USB. A la figura \ref{fig:distribucio} es poden veure especificats els tres canals de distribució.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics*[scale=0.5]{Memoria/Arquitectura/Projecte/distribucio.png}
+    \caption{Distribució de l'aplicació.}
+    \label{fig:distribucio}
+\end{figure}
+\clearpage

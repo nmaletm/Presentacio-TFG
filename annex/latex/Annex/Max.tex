@@ -1,0 +1,12 @@
+\subsection{MAX}
+\label{sec:max}
+
+MAX és un sistema de recollida i visualització de registres d’activitat generada per usuaris i aplicacions així com les interactuacions entre usuaris i entre usuaris i aplicacions.
+
+El MAX registra l’activitat de dues maneres: Activa i passiva. Quan ho fa de manera passiva, els usuaris i aplicacions que generen activitat, usen l’API del MAX per registrar-hi activitat. Quan ho fa de manera activa, el MAX va a buscar l’activitat al sistema que la genera a través d’unes regles predefinides, per exemple, l’activitat generada per un compte de Twitter i un hashtag associat.
+
+Tant els usuaris com les aplicacions que puguin interactuar amb el MAX poden ser d’origen en escenaris corporatius (interns) o en canvi ser totalment externs al sistema.
+
+Aquest sistema disposa d'una API REST que està protegida amb OAuth2. Aquesta API està documentada a \url{http://max.beta.upcnet.es/docs/v3/ca/}.
+
+El codi del projecte MAX està disponible al GitHub \url{https://github.com/UPCnet/maxserver}

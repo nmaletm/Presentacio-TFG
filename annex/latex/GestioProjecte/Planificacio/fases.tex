@@ -1,0 +1,93 @@
+\subsubsection{Fases del projecte}
+
+Per a desenvolupar aquest projecte s'està seguint la metodologia àgil \textit{Scrum}. Per aquest motiu no es poden definir unes fases amb data d'inici i data final, per tant només es pot dividir el projecte en sis fases que s'aniran repartint entre els diferents \textit{sprints} en funció del que demani negoci.
+
+
+\paragraph{Estructura de l'aplicació\\}
+
+En aquesta fase s'iniciarà el desenvolupament del projecte creant el \textit{core} de l'aplicació per poder continuar amb les altres fases.
+
+\textbf{Requisits:}  Cap, aquesta és la primera fase del projecte \newline
+\textbf{Dificultat estimada:}  Mitjana-Alta \newline
+\textbf{Prioritat:}  Molt alta \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Crear i estructurar el projecte.
+    \item Preparar l'aplicació per a que es pugui connectar amb el MAX.
+    \item Iniciar sessió amb el sistema d'autenticació de la UPC.
+\end{compactitem}
+
+
+\paragraph{\textit{Timeline} i veure activitat\\}
+Aquesta fase inclourà la funcionalitat a l'aplicació de veure les activitats recents i poder afegir-ne de noves.
+
+\textbf{Requisits:}  Estructura de l'aplicació finalitzada \newline
+\textbf{Dificultat estimada:}  Mitjana \newline
+\textbf{Prioritat:}  Mitjana \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Obtenir les activitats del \textit{timeline}.
+    \item Visualitzar el contingut d'una activitat del \textit{timeline}, el text de l'activitat i els seus comentaris.
+    \item Publicar un nou comentari a una activitat.
+    \item Esborrar un comentari (un comentari propi o a una activitat pròpia).
+    \item Publicar una nova activitat, indicant el text i el context al que es publica.
+    \item Esborrar una activitat (un activitat pròpia).
+\end{compactitem}
+
+
+\paragraph{Gestió de subscripcions\\}
+Aquesta fase incorporarà al projecte la funcionalitat de veure els contexts als que l'usuari està subscrit i que l'usuari pugui gestionar-los.
+
+\textbf{Requisits:}  Estructura de l'aplicació finalitzada \newline
+\textbf{Dificultat estimada:}  Mitjana \newline
+\textbf{Prioritat:}  Mitjana \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Mostrar contexts als que l'usuari està subscrit.
+    \item Visualitzar activitats d'un dels contexts.
+    \item Publicar a un dels contexts.
+    \item Esborrar la subscripció a un dels contexts (si l'usuari te permís per poder-ho fer).
+    \item Afegir una nova subscripció, per fer-ho l'usuari haurà de poder cercar contexts públics.
+\end{compactitem}
+
+
+\paragraph{Converses\\}
+En aquesta fase s'incorporarà la funcionalitat de veure les converses de l'usuari, poder veure el contingut i afegir nous missatges a una conversa.
+
+\textbf{Requisits:}  Estructura de l'aplicació finalitzada \newline
+\textbf{Dificultat estimada:}  Mitjana \newline
+\textbf{Prioritat:}  Alta \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Mostrar les converses de l'usuari.
+    \item Visualitzar el contingut d'una conversa.
+    \item Afegir un nou missatge a una conversa.
+    \item Veure la informació d'una conversa (nom del grup i participants).
+    \item Sortir o eliminar una conversa (en funció de si l'usuari és el creador del grup, o és una conversa de dues persones).
+\end{compactitem}
+
+\paragraph{Perfil\\}
+Aquesta fase inclourà la funcionalitat de veure el perfil de l'usuari i que aquest pugui ser editat.
+
+\textbf{Requisits:}  Estructura de l'aplicació finalitzada \newline
+\textbf{Dificultat estimada:}  Baixa \newline
+\textbf{Prioritat:}  Baixa \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Mostrar el perfil de l'usuari (nom, \textit{twitter} i activitats de l'usuari)
+    \item Editar el nom i \textit{twitter} de l'usuari
+    \item Afegir una nova activitat al perfil de l'usuari
+    \item Tancar sessió
+\end{compactitem}
+
+\paragraph{Ampliació converses\\}
+Aquesta fase incorporarà al projecte millores al sistema de converses. En concret aportarà temps real a la conversa i notificacions \textit{push}.
+
+\textbf{Requisits:}  Fase de Converses finalitzada \newline
+\textbf{Dificultat estimada:}  Alta \newline
+\textbf{Prioritat:}  Mitjana \newline
+\textbf{Tasques:} 
+\begin{compactitem}
+    \item Modificar les converses per rebre missatges en temps real.
+    \item Rebre notificacions \textit{push} a través del sistema APNS\footnote{Apple Push Notification Service}.
+\end{compactitem}

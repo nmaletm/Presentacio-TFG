@@ -1,0 +1,70 @@
+\subsection{Ampliació converses}
+
+Aquesta etapa realment és una continuació de l'etapa de ``\nameref{sec:fase4}'', ja que s'afegeixen dues funcionalitats a les converses privades entre els usuaris. Les funcionalitats a desenvolupar són les següents:
+
+\begin{compactitem}
+    \item El sistema ha de notificar a l'usuari quan es publiqui un missatge a una conversa de l'usuari i aquest tingui l'aplicació tancada.
+    \item Han d'arribar els missatges en temps real quan l'usuari tingui l'aplicació oberta.
+\end{compactitem}
+
+Aquesta etapa inclou les històries d'usuari 20 i 21 (pàgina \pageref{sec:historia_20}).
+
+\subsubsection{Implementació}
+
+Aquesta etapa està formada per dues grans tasques. Les dues funcionalitats tenen l'objectiu d'avisar a l'usuari quan un altre membre ha enviat un missatge a una conversa de l'usuari. La gran diferencia és la forma en que s'ha de notificar segons si té l'aplicació oberta o no.
+
+Quan l'usuari té l'aplicació oberta, el missatge ha d'arribar en temps real, el dispositiu ha de vibrar i s'ha de mostrar a les vistes que ha arribat el missatge. Si l'usuari té oberta la conversa, ha de sortir el missatge a la llista de missatges. Si l'usuari no té oberta la conversa, s'ha de posar una icona a la pestanya de converses. Aquesta icona ha d'indicar el número de converses que tenen missatges sense llegir.
+
+En canvi, quan l'usuari no té l'aplicació oberta, se li ha d'enviar una notificació \textit{push} al seu dispositiu. Aquesta notificació ha de tenir la icona, el nom de l'aplicació, i l'inici del contingut del missatge que ha arribat.
+
+Per a desenvolupar la primera tasca, la tasca que implica afegir el temps real, es va començar analitzant el sistema que el client ja tenia implementat i quines opcions existien per poder-ho adaptar a l'aplicació iOS del projecte.
+
+El client UPCnet ja tenia implementat el sistema utilitzant \textit{websockets}\footnote{Tecnologia que proporciona un canal de comunicació bi-direccional i \textit{full-duplex} sobre un únic \textit{socket} TCP}. Normalment a una aplicació nativa que es comunica amb un servidor s'utilitzen \textit{sockets}\footnote{Mecanisme per a l'entrega de paquets de dades provinents de la targeta de xarxa als processos. Queda definit per una parella de direccions IP local i remota, un protocol de transport i una parella de números de port local i remot.}, ja que el fet d'utilitzar \textit{websockets} afegeix capes al procés i per tant redueix l'eficiència.
+
+Però com que el client ho va triar per a poder-ho utilitzar amb el \textit{widget} web del MAX, i aquest no podia treballar amb \textit{sockets}, o es mantenien les dues tecnologies o es treballava amb \textit{websockets}. El client va desestimar la primera opció per evitar haver de mantenir les dues tecnologies alhora.
+
+El sistema que el client tenia implantant utilitzava el protocol \textit{STOMP}\footnote{Protocol de missatgeria orientat a missatges de text. Té l'objectiu de facilitar la compatibilitat de la missatgeria entre els llenguatges i les plataformes. Documentació\cite{stomp_doc}} per sobre dels \textit{websockets}. Es va fer una cerca de llibreries que facilitessin l'us d'aquesta combinació de protocol i tecnologia, però no es va trobar cap.
+
+Es va trobar una llibreria que facilitava l'us de \textit{websockets} amb el llenguatge Objective-c, SocketRocket\footnote{\url{https://github.com/square/SocketRocket}}. En concret aquesta llibreria oferia una API similar a l'API nativa de \textit{sockets} d'Objective-c.
+
+També es va trobar una llibreria client d'\textit{STOMP} però que treballava amb \textit{sockets}, objc-stomp\footnote{\url{https://github.com/juretta/objc-stomp}}. Aquesta llibreria oferia una implementació completa del protocol \textit{STOMP} per a Objective-c. Com s'ha dit prèviament, aquesta llibreria no ens servia ja que el nostre client tenia implementat el servidor amb \textit{websockets}.
+
+Com que les dues llibreries eren codi obert i es disposava el codi al \textit{GitHub}, es va decidir re-implementar el codi de la segona (obj-stomp) per a que utilitzes \textit{websockets}. Per a fer-ho es va realitzar un \textit{fork} del projecte de \textit{GitHub} d'obj-stomp\footnote{\url{https://github.com/nmaletm/objc-stomp}}.
+
+En aquest \textit{fork}, es va canviar les crides de \textit{sockets} per crides a la llibreria SocketRocket. Es van haver de fer alguns canvis a la constructora de la llibreria, ja que el \textit{socket} necessita una IP i un port, en canvi el \textit{websocket} necessita una direcció web. Un cop es va tenir la modificació de la llibreria, es va publicar al \textit{GitHub} per a compartir-ho amb la comunitat de desenvolupadors.
+
+A l'aplicació per a fer la gestió del temps real, es va decidir implementar una classe controladora del temps real (\textit{UPCRealTimeManager}). Aquesta classe té la responsabilitat d'iniciar la connexió de temps real amb el servidor, i al rebre un missatge notificar-ho a la resta de l'aplicació. A més també és el responsable de tenir el control dels missatges que l'usuari no ha llegit.
+
+Per realitzar aquesta notificació, es va decidir utilitzar el centre de notificacions. Es va crear un tipus de notificació de nou missatge, que a dintre portava com a contingut el nou missatge. 
+
+Totes les vistes que han de fer alguna acció al rebre un missatge, es registren com a observadores del tipus de notificació de nou missatge. Quan el centre de notificacions rep una notificació de nou missatge, aquest notifica a totes classes observadores.
+
+
+\pintaUnaImatge
+    {captura-converses-missates-nous}
+    {Llista de converses amb una conversa amb missatges sense llegir.}
+
+
+D'aquesta manera, cada vista definia el seu comportament al arribar un missatge. Per exemple, el controlador de la vista de veure conversa, al rebre un nou missatge, l'afegeix a la llista de missatges. A més aquest controlador cada cop que l'usuari veu una conversa, avisa al controlador de temps real que s'han vist els missatges d'aquella conversa.
+
+Una altra vista que també depèn dels missatges nous, és la de llista de converses. Cada cop que arriba un nou missatge, aquesta marca la conversa com a conversa amb missatges sense llegir.
+
+L'altre tasca d'aquesta etapa és la de rebre notificacions \textit{push}. Aquesta tasca implica algunes accions per part de l'aplicació, però la majoria de tasques les ha de realitzar el servidor MAX.
+
+En concret, l'aplicació l'únic que ha de realitzar és registrar i des-registrar l'identificador del dispositiu al MAX. Això és degut a que el MAX per poder enviar les notificacions necessita saber l'identificador del dispositiu al que ha d'enviar la notificació.
+
+Aquest registre depèn del dispositiu i de l'usuari. Per tant, cada cop que s'inicia sessió s'ha de afegir l'identificador al MAX per al usuari que ha iniciat sessió. De la mateixa manera, cada cop que es tanca la sessió, s'ha de treure l'identificador de l'usuari al MAX.
+
+Però abans de poder afegir o treure l'identificador al MAX, aquest s'ha d'obtenir. Per fer-ho es va preparar el \textit{UPCAppDelegate} (delegat de totes les responsabilitats generals de l'aplicació), per a que sol·licités l'identificador i al rebre el guardés per a posteriors usos. Aquest identificador en aquest moment encara no estava vinculat a cap usuari, només estava vinculat al dispositiu.
+
+Un cop ja es disposava de l'identificador, s'havia de preparar l'aplicació per a que al iniciar sessió i al tancar-la, registres/des-registres l'identificador al MAX al usuari.
+
+També es va preparar el \textit{UPCAppDelegate} per a que al rebre una notificació obris la pestanya de converses.
+
+A partir d'aquest moment l'aplicació ja podia rebre les notificacions \textit{push}.
+
+
+
+
+
+

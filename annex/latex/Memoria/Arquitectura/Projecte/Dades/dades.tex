@@ -1,0 +1,5 @@
+\subsection{Capa de dades}
+
+Aquest projecte no disposa de capa de dades, ja que totes les dades les obté del servidor MAX. Aquestes dades no es guarden a l'aplicació i per tant cada cop es tanca i es torna a obrir l'aplicació, les dades es tornen a carregar del servidor.
+
+La única informació que es guarda a l'aplicació són un conjunt de dades de l'usuari. Es persisteix el nom d'usuari i el \textit{token}, que s'obtenen a l'hora d'iniciar sessió. Aquestes dades es guarden utilitzant \textit{NSUserDefaults}\footnote{Emmagatzematge que ofereix el sistema per a guardar parelles clau-valor.}.

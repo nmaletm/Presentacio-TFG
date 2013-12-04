@@ -1,0 +1,90 @@
+\subsection{Converses}
+\label{sec:fase4}
+
+L'objectiu d'aquesta etapa és el d'afegir les converses privades entre els usuaris. S'han d'implementar les següents funcionalitats:
+
+\begin{compactitem}
+    \item El sistema ha d'obtenir i mostrar les converses de l'usuari.
+    \item Si l'usuari selecciona una conversa, el sistema ha d'obtenir tots els missatges i mostrar-los a l'usuari en format de xat.
+    \item L'usuari ha de poder publicar un nou missatge a una conversa.
+    \item L'usuari ha de poder veure la informació d'una conversa (nom i participants) i modificar-ho si és el creador de la conversa.
+    \item L'usuari ha de poder crear una nova conversa indicant els participants i el contingut del primer missatge. En cas que hi hagi més de dos participants, el sistema ha de demanar a l'usuari el nom del grup.
+    \item L'usuari ha de poder sortir d'una conversa o esborrar-la si és el creador.
+\end{compactitem}
+
+Aquesta etapa inclou les històries d'usuari 14, 15, 16, 17, 18, 19 i 25 (pàgines \pageref{sec:historia_14} i \pageref{sec:historia_25}).
+
+S'ha separat en una altra etapa les millores a les converses de temps real i notificacions \textit{push}. Aquesta separació és deguda a que ajuntar-les amb aquesta etapa complicaria molt aquest apartat. Per aquest motiu s'ha considerat separar-ho en dues etapes. Això no implica que al projecte s'hagin d'implementat per separat.
+
+\subsubsection{Implementació}
+
+La vista de les converses igual que la del \textit{timeline} i les subscripcions mostra una llista de elements, en aquest cas converses, per tant el format ideal és el d'una taula.
+
+Per a les converses es va haver d'afegir un nou tipus de cel·la amb la informació de la conversa (nom, text i data de l'últim missatge, i la fotografia de l'usuari/grup).
+
+\pintaDosImatges
+    {captura-converses}
+        {Resultat de la vista de converses.}
+    {captura-conversa-missatges}
+        {Resultat de la vista dels missatges d'una conversa.}
+
+La tasca principal d'aquesta etapa va ser la de desenvolupar la vista de la conversa, amb l'estil de xat. Per a fer-ho es van valorar diverses opcions. Es va fer una petita cerca de projectes que haguessin necessitat implementar un xat/SMS, i tutorials que parlessin del tema. El resultat va ser que hi havien molts projectes, molts d'ells amb el codi obert.
+
+El projecte que més s'ajustava a les necessitats d'aquest projecte va ser \textit{AcaniChat}\footnote{https://github.com/acani/AcaniChat}. Però integrar els components d'\textit{AcaniChat} amb els del projecte no era senzill, així que es va decidir seguir els passos que havien seguit els desenvolupadors d'aquesta llibreria, ja que al \textit{ReadMe} d'aquesta citaven les fonts.
+
+Per aquest motiu es va seguir el tutorial \textit{Tutorial on SMS style bubbles}\cite{bubbles_tutorial}. Després de seguir-lo i obtenir les bafarades amb un text, es va modificar per ajustar les bafarades amb els requisits del client. Aquest volia que es mostres l'autor (si no era el mateix usuari) i la data de publicació a més del contingut del missatge.
+
+Un cop ja es tenia la vista preparada només faltava preparar les crides per a carregar la informació del servidor.
+
+Des de la vista d'una conversa clicant un botó de la barra de navegació, s'ha de mostrar una nova finestra amb les dades de la conversa. A més, en cas que es tracti d'una conversa de grup i l'usuari sigui el creador de la conversa, també ha de poder modificar el nom del grup i afegir/treure participants. 
+
+\pintaDosImatges
+    {captura-editar-conversa-propietari}
+        {Resultat de la vista d'informació d'una conversa (com a propietari).}
+    {captura-editar-conversa-editant}
+        {Resultat de la vista d'editar la informació d'una conversa.}
+
+Per oferir aquesta funcionalitat, es va afegir una nova vista modal amb el nom de la conversa i una llista de participants. Com que a la llista hi havia possibilitats que es poguessin eliminar participants de la conversa es va utilitzar una taula nativa d'iOS. Es va crear una nova vista de cel·la per a poder mostrar la fotografia de l'usuari, el seu nom i una etiqueta indicant si és el propietari o no.
+
+Si l'usuari és el creador de la conversa pot esborrar un usuari, lliscant la cel·la del participant cap a un costat. Aleshores la cel·la es desplaça cap a un costat i apareix un botó d'esborrar. Si l'usuari clica al botó se li mostra un confirmació i si aquest ho accepta s'esborra el participant de la conversa.
+
+En cas que l'usuari tingui permís per editar la conversa, al costat del nom del grup li apareix una icona d'un llapis. Si l'usuari clica a sobre del nom o del llapis, activa el mode d'edició. 
+
+En aquest mode l'etiqueta del nom de la conversa desapareix i es canvia per un camp de text. Però a més de poder editar el nom també pot afegir nous participants. Per fer-ho a la barra de navegació hi ha un botó amb un ``+'', quan l'usuari el clica se li mostra una vista modal amb un camp de cerca. 
+
+A la cerca, al mateix moment que l'usuari va escrivint el nom, el sistema realitza consultes i va mostrant el resultat a l'usuari. Un cop l'usuari selecciona un usuari de la llista de resultats, la vista de cerca es tanca. Aleshores es mostra un diàleg de confirmació per verificar que l'usuari realment vol afegir al membre. 
+
+\pintaDosImatges
+    {captura-nova-conversa}
+        {Resultat de la vista de nova conversa.}
+    {captura-cercar-usuaris}
+        {Resultat de la vista de cercar usuaris.}
+
+La vista de cerca de persones es va desenvolupar com a component independent, per a poder ser re-utilitzat fàcilment (per exemple al crear una nova conversa). Per fer-ho, es va fer que el controlador de la vista retornés el \textit{username} mitjançant una notificació (amb el \textit{NSNotificationCenter}), i que la vista que havia instància el cercador estigués registrat com a observador de la notificació. 
+        
+A la barra de navegació de la llista de converses, hi ha un botó ``+'' per a crear una nova conversa. En aquest cas, se li mostra una vista modal amb un camp de text per a introduir el contingut del primer missatge. A més a sobre d'aquest camp hi ha un camp per a afegir participants.
+
+Els participants es poden afegir escrivint els noms d'usuari o clicant al botó ``+''. En aquest últim cas, el sistema mostra la vista de cercar usuaris (la mateixa que s'utilitza per afegir persones al editar una conversa).
+
+A la llista de converses l'usuari pot esborrar o sortir d'una conversa, lliscant cap a un costat la cel·la. Un cop ho ha realitzat, el sistema mostra un botó d'esborrat. Abans d'esborrar la conversa, el sistema demana una confirmació a l'usuari.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

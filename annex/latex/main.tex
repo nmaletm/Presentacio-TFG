@@ -1,0 +1,102 @@
+
+\documentclass[twoside,12pt]{article}
+%\usepackage[margin=2.5cm]{geometry} 
+%\geometry{letterpaper}
+\usepackage[top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\geometry{a4paper}
+
+\raggedbottom
+
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+\usepackage{paralist}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{placeins}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress,square]{natbib}
+\usepackage{xcolor, colortbl}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+% Posem interlineat a 1,5
+\setstretch{1,20}
+
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Evita bastants warnings per culpa de l'espai
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+
+\setcounter{secnumdepth}{5}
+
+\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+%\setcounter{tocdepth}{5}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
+
+% Configurem el listing (insertar codi)
+% Per a posar JSON hi ha un include a NotDef
+\lstset{
+    basicstyle=\small\sffamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=tb,
+    columns=fullflexible,
+    showstringspaces=false
+}
+\renewcommand{\lstlistingname}{Llistat}
+
+%Color de la taula per defecte:
+\definecolor{colorBorderDefecte}{rgb}{0,0,0}
+\arrayrulecolor{colorBorderDefecte}
+
+\begin{comment}
+Dades del projecte
+(també es poden posar comentaris d'una linia posant %asfasfa
+\end{comment}
+
+\title{StreamUPC un nou concepte de col·laboració}
+\author{Néstor Malet}
+\date{Juny 2012}
+
+% Permetem moltes imatges float en una mateixa pagina
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}   
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\begin{document}
+\bibliographystyle{plain}
+
+%\input{Entregues/entrega_abast.tex}
+%\input{Entregues/entrega_planificacio.tex}
+%\input{Entregues/entrega_pressupost_sostenibilitat.tex}
+%\input{Entregues/entrega_context_biblio.tex}
+%\input{Entregues/gep.tex}
+
+%\input{Entregues/informe_seguiment.tex}
+
+\input{Entregues/memoria.tex}
+
+
+\end{document}

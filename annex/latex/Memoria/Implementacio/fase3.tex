@@ -1,0 +1,56 @@
+\subsection{Gestió de subscripcions}
+
+L'objectiu d'aquesta etapa és el de dotar a l'aplicació la funcionalitat de gestionar les subscripcions de l'usuari. És a dir, oferir a l'usuari la possibilitat de veure les seves subscripcions, esborrar-ne una i afegir-ne de noves.
+
+Per a considerar l'etapa com a finalitzada, l'aplicació ha de tenir les següents funcionalitats:
+
+\begin{compactitem}
+    \item El sistema ha d'obtenir i mostrar les subscripcions de l'usuari.
+    \item Si l'usuari selecciona una subscripció, el sistema ha de mostrar les activitats del context seleccionat.
+    \item L'usuari ha de poder buscar contexts als que es pugui subscriure.
+    \item Si l'usuari ha buscat un context i el selecciona s'ha de subscriure.
+    \item L'usuari ha de poder esborrar una subscripció.
+\end{compactitem}
+
+Aquesta etapa inclou les històries d'usuari 7, 8, 9, 10 i 24 (pàgines \pageref{sec:historia_7} i \pageref{sec:historia_24}).
+
+En aquesta etapa es poden aprofitar algunes vistes definides a ``\nameref{sec:etapa2}''. Com que les etapes no impliquen un ordre, en cas que el client prioritzi aquestes funcionalitats per davant de les de l'altra etapa es realitzaran en aquesta etapa.
+
+\subsubsection{Implementació}
+
+El primer que es va fer va ser afegir una nova pestanya a l'aplicació i en aquesta pestanya afegir una taula amb el seu controlador. Aquesta taula obtenia les dades des les subscripcions de l'usuari i les agrupava per tipologia del context.
+
+Per a distingir les diferents tipologies dels contexts, aquests al atribut \textit{tags} contenen una etiqueta pre-definides. A la taula \ref{tagsContexts} es poden veure les diferents etiquetes i els seus significats. Si un context no disposa de cap pre-definida, aleshores es classifica com a ``Altres''.
+
+\begin{table}[h]
+    \begin{center}
+    \begin{tabular}{| l | l |}
+        \hline
+            \textbf{\textit{Etiqueta}}  & \textbf{Significat}           \\ 
+        \hline
+            {[ASSIG]}                     & Context d'una assignatura     \\ 
+            {[INST]}                      & Context institucional         \\
+            {[COMMUNITY]}                 & Context d'una comunitat       \\
+        \hline
+    \end{tabular}
+    \end{center}
+    \caption{ Significat de les diferents etiquetes. \label{tagsContexts}}
+\end{table}
+
+Després es va crear una nova vista similar a la del \textit{timeline} però carregant només les activitats d'un context. Aquesta vista es mostra quan l'usuari selecciona un context de la llista de subscripcions.
+
+Gràcies a la gran similitud entre aquesta vista i la del \textit{timeline}, es va poder re-utilitzar una part de la feina feta a l'etapa ``\nameref{sec:etapa2}''. Es va utilitzar la cel·la del \textit{timeline} ja que a les dues situacions es mostrava una activitat i es necessitava mostrar la mateixa informació. Com que s'havia de tornar a mostrar la informació de l'activitat al clicar a la cel·la, també es va re-utilitzar la vista de veure una activitat.
+
+
+
+\pintaDosImatges
+    {captura-subscripcions}
+        {Resultat de la vista de subscripcions.}
+    {captura-subscripcio-activitats}
+        {Resultat de la vista d'activitats d'un context.}
+
+
+També s'havia d'oferir a l'usuari la possibilitat de publicar una activitat al context. Es va aprofitar la vista d'afegir una activitat fent una petita modificació per a poder obrir la vista amb un context ja seleccionat.
+
+Per acabar aquesta etapa, s'havia de poder esborrar una activitat i una subscripció a les activitats d'un context i a la vista de les subscripcions respectivament. Per fer-ho es va seguir la forma en que s'ha definit anteriorment.
+
