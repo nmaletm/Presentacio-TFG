@@ -22,6 +22,8 @@
 
 		<link rel="stylesheet" href="css/custom.css">
 
+		<link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
+
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="thirdparty/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -40,74 +42,150 @@
 <!-- inici slides -->
 <div class="slides">
     <section>
-        <h1>StreamUPC <br>Un nou concepte de col·laboració<br>
-        </h1>
+        <h1>StreamUPC <br>Un nou concepte de col·laboració<br></h1>
+        <p>&nbsp;</p>
+        <h3>Néstor Malet Montolío</h3>
+        <p>&nbsp;</p>
+        <div class="third-block">
+        	<h4>Director</h4>
+        	Jaume Moral <br>Ros
+        </div>
+        <div class="third-block">
+        	<h4>Co-Director</h4>
+        	Albert Obiols <br>Vives
+        </div>
+        <div class="third-block">
+        	<h4>Ponent</h4>
+        	Josep Casanovas <br>Garcia
+        </div>
     </section>
-	
-	<!-- Canvi de block -->
-	
-    <section>
-		    <section>
-				<h2>Client</h2>
-				
-			</section>
-		    <section>
-				<h3>Client: UPCnet</h3>
-				
-			</section>
-		    <section>
-				<h3>Client: Productes</h3>
 
-			</section>
-		    <section>
-				<h3>Client: Necessitats</h3>
-				
-			</section>
-    </section>
+	<!-- Canvi de block -->
+
+
+    <section>
+		<h3>Índex</h3>
+	
+		<ul id="index">
+			<li><a href="#/Client">Client</a></li>
+			<li><a href="#/Projecte">Projecte</a></li>
+			<li><a href="#/Especificació">Especificació</a></li>
+			<li><a href="#/Arquitectura">Arquitectura</a></li>
+			<li><a href="#/Demostracio">Demostració</a></li>
+			<li><a href="#/Conclusions">Conclusions</a></li>
+			<li><a href="#/Enllaços">Enllaços</a></li>
+
+		</ul>
+
+	</section>
+
+	<!-- Canvi de block -->
+	
+    <section>
+	    <section id="Client">
+			<h2>Client</h2>
+			<img src="annex/logo_upcnet.png" id="logo-upcnet" class="no-shadow"/>
+		</section>
+	    <section id="Client-SomUPC">
+			<h3>Client: SomUPC</h3>
+			<div class="half-block">
+				<img src="annex/upcnet-poster_pet.jpg" id="img-poster" class="fit"/>
+			</div>
+			<div class="half-block">
+				<ul>
+					<li>Social, mòbil i en temps real</li>
+					<li>Espai personal i personalitzable</li>
+					<li>Accés unificat als serveis que s'ofereixen</li>
+
+				</ul>
+			</div>
+		</section>
+	    <section id="Client-uLearn">
+			<h3>Client: uLearn</h3>
+			<img src="annex/upcnet-comunitats.png" class="stretch no-shadow"/>
+		</section>
+</section>
 	
 	<!-- Canvi de block -->
 	
     <section>
-		    <section>
+		    <section id="Projecte">
 				<h2>Projecte</h2>
-				
+				<ul id="index">
+					<li><a href="#/Projecte-Metodologia">Metodologia</a></li>
+					<li><a href="#/Projecte-Pressupost">Pressupost</a></li>
+					<li><a href="#/Projecte-Planificació">Planificació</a></li>
+					<li><a href="#/Projecte-Abast">Abast</a></li>
+					<li><a href="#/Projecte-Sostenibilitat">Sostenibilitat i responsabilitat social</a></li>
+				</ul>
 			</section>
-		    <section>
+		    <section id="Projecte-Metodologia">
 				<h3>Projecte: Metodologia</h3>
 				
 			</section>
-		    <section>
+		    <section id="Projecte-Pressupost">
 				<h3>Projecte: Pressupost</h3>
-				
-				<table>
-					<tr>
-						<th>Recursos</th>
-						<th>Cost</th>
-					</tr>
-					<tr>
-						<td>Humans</td>
-						<td>11.205 &euro;</td>
-					</tr>
-					<tr>
-						<td>Materials</td>
-						<td>39.83 &euro;</td>
-					</tr>
-					<tr>
-						<td>Total</td>
-						<td>11.244 &euro;</td>
-					</tr>
-				</table>
+				<div class="half-block">
+					<h4>Costos directes</h4>
+					<table cellspacing='0' class="decorated">
+						<thead>
+							<tr>
+								<th>Recursos</th>
+								<th>Cost</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Humans</td>
+								<td style="text-align: right;">11.205 &euro;</td>
+							</tr>
+							<tr>
+								<td>Materials</td>
+								<td style="text-align: right;">56 &euro;</td>
+							</tr>
+							<tr>
+								<td>Total</td>
+								<td style="text-align: right;">11.261 &euro;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="half-block">
+					<h4>Total estimat</h4>
+					<table cellspacing='0' class="decorated">
+						<thead>
+							<tr>
+								<th>Costos</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Directes</td>
+								<td style="text-align: right;">11.261 &euro;</td>
+							</tr>
+							<tr>
+								<td>Indirectes</td>
+								<td style="text-align: right;">788 &euro;</td>
+							</tr>
+							<tr>
+								<td>Total</td>
+								<td style="text-align: right;">12.049 &euro;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</section>
 
-		    <section>
+		    <section id="Projecte-Planificació">
 				<h3>Projecte: Planificació</h3>
-				<img src="annex/latex/GestioProjecte/Planificacio/diagrama_gantt_gran.png" class="stretch"/>
+				<img src="annex/diagrama_gantt_gran.png" class="stretch"/>
 			</section>
-		    <section>
+		    <section id="Projecte-Abast">
 				<h3>Projecte: Abast</h3>
-				
+				<img src="annex/abast.png" class="stretch no-shadow"/>
 			</section>
-		    <section>
+		    <section id="Projecte-Sostenibilitat">
 				<h3>Projecte: Sostenibilitat i responsabilitat social</h3>
 				<ul>
 					<li>LOPD</li>
@@ -119,30 +197,55 @@
 	<!-- Canvi de block -->
 	
     <section>
-		    <section>
+		    <section id="Especificació">
 				<h2>Especificació</h2>
 				
 			</section>
-		    <section>
+		    <section id="Especificació-HistoriesUsuari">
 				<h3>Especificació: Històries d'usuari</h3>
-				
+<div id="historia-usuari">
+	<div><span class="cap">9. Afegir una subscripció</span></div>
+	<div>
+		<span>
+			<b>Com a</b> usuari registrat <b>jo vull</b> afegir noves subscripcions <b>per a poder</b> veure les activitats
+			publicades a un espai del que ara no estic subscrit.
+		</span>
+	</div>
+	<div>
+		<span class="cap" style="width: 10%">Prioritat:</span><span>65</span>
+	</div>
+	<div><span class="cap">Criteris d’acceptació:</div>
+	<div>
+		<span>
+			<ul>
+				<li>Vull afegir una nova subscripció a un context.</li>
+				<li>No he de poder subscriurem a un context que no sigui públic.</li>
+				<li>Se m’ha de confirmar si realment vull subscriurem al context.</li>
+				<li>Si accepto, s’ha de crear la subscripció al context.</li>
+				<li>Si cancel·lo, no s’ha de crear la subscripció.</li>
+			</ul>
+		</span>
+	</div>
+</div>
 			</section>
-		    <section>
+		    <section id="Especificació-ModelConceptual">
 				<h3>Especificació: Model conceptual</h3>
-				
+				<img src="annex/model_conceptual_especificacio.png" class="stretch no-shadow"/>
 			</section>
     </section>
 
 	<!-- Canvi de block -->
 	
     <section>
-		    <section>
+		    <section id="Arquitectura">
 				<h2>Arquitectura</h2>
 				<p>Segueix patrò 3 capes, però no disposa de capa de dades ja que no té persistència</p>
 			</section>
 		    <section>
 				<h3>Arquitectura: Presentació</h3>
-				
+				<div class="stretch ">
+
+				</div>
 			</section>
 		    <section>
 				<h3>Arquitectura: Domini</h3>
@@ -156,21 +259,21 @@
 	
 	<!-- Canvi de block -->
 	
-    <section>
+    <section id="Demostració">
         <h2>Demostració</h2>
 		<video class="video-demo" src="annex/demo.mov"></video>
     </section>
 
 	<!-- Canvi de block -->
 	
-    <section>
+    <section id="Conclusions">
         <h2>Conclusions</h2>
 		
     </section>
 
 	<!-- Canvi de block -->
 	
-    <section>
+    <section id="Enllaços">
         <h2>Enllaços</h2>
 		
     </section>
@@ -181,6 +284,7 @@
 
 		<script src="thirdparty/lib/js/head.min.js"></script>
 		<script src="thirdparty/js/reveal.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 		<script>
 
@@ -193,6 +297,17 @@
 				center: false,
 				mouseWheel: true,
 				slideNumber: true,
+				backgroundTransition: 'none',
+
+
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: 960,
+				height: 700,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.2,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -207,7 +322,9 @@
 					{ src: 'thirdparty/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
+			$(document).ready(function(){
+			    $("table tr:even").addClass("even");
+			});
 		</script>
 
 	</body>
