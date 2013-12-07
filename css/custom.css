@@ -2,6 +2,9 @@
 #index{
 	width: 100%;
 }
+#index li{
+	list-style-type:square;
+}
 #index a{
 	color:#657B83;
 	text-decoration: none;
@@ -13,6 +16,22 @@
 
 #logo-upcnet{
 	margin-top: 100px;
+}
+
+#app-store{
+	height: 80px;
+	vertical-align: middle;
+}
+#icon-pdf{
+	vertical-align: sub;
+}
+#icon-latex{
+	height: 40px;
+	vertical-align: middle;
+}
+#icon-github{
+	height: 32px;
+	vertical-align: sub;
 }
 
 #historia-usuari{
@@ -42,9 +61,13 @@
 #historia-usuari ul li{
 	margin: 0;
 }
-/* Coses generals */
 
-.reveal .no-shadow{
+#arquitectura-presentacio-resultat, #arquitectura-presentacio-disseny{
+	height: 500px;
+}
+
+/* Coses generals */
+.reveal .no-shadow, .reveal a img, .reveal:hover a img{
 	border: 0;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -68,30 +91,32 @@
 	background-image: url('logo_inlab.png');
 	background-position: 90% 10%;
 	background-repeat: no-repeat;
+	-webkit-transform-origin: top right;
+	-moz-transform-origin: top right;
 	transform-origin: top right;
 }
 
 @media only screen and (min-width: 1200px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.5); 
+		transform:  scale(0.5); -moz-transform:  scale(0.5); -webkit-transform:  scale(0.5); 
 	}
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.4); 
+		transform:  scale(0.4);  -moz-transform:  scale(0.4); -webkit-transform:  scale(0.4); 
 	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 800px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.3); 
+		transform:  scale(0.3);  -moz-transform:  scale(0.3); -webkit-transform:  scale(0.3); 
 	}
 }
 
 @media only screen and (max-width: 480px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.2); 
+		transform:  scale(0.2);  -moz-transform:  scale(0.2); -webkit-transform:  scale(0.2); 
 	}
 }
 

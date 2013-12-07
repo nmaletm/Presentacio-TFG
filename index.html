@@ -44,7 +44,7 @@
 <div class="state-background"><div class="logo"></div></div>
 <!-- inici slides -->
 <div class="slides">
-    <section>
+    <section id="Portada">
         <h1>StreamUPC <br>Un nou concepte de col·laboració<br></h1>
         <p>&nbsp;</p>
         <h3>Néstor Malet Montolío</h3>
@@ -66,18 +66,17 @@
 	<!-- Canvi de block -->
 
 
-    <section>
+    <section id="Índex">
 		<h3>Índex</h3>
 	
-		<ul id="index" class="fa-ul">
-			<li><i class="fa-li fa fa-square"></i><a href="#/Client">Client</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Projecte">Projecte</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Especificació">Especificació</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Arquitectura">Arquitectura</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Demostracio">Demostració</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Conclusions">Conclusions</a></li>
-			<li><i class="fa-li fa fa-square"></i><a href="#/Enllaços">Enllaços</a></li>
-
+		<ul id="index">
+			<li><a href="#/Client">Client</a></li>
+			<li><a href="#/Projecte">Projecte</a></li>
+			<li><a href="#/Especificació">Especificació</a></li>
+			<li><a href="#/Arquitectura">Arquitectura</a></li>
+			<li><a href="#/Demostracio">Demostració</a></li>
+			<li><a href="#/Conclusions">Conclusions</a></li>
+			<li><a href="#/Enllaços">Enllaços</a></li>
 		</ul>
 
 	</section>
@@ -202,6 +201,10 @@
     <section>
 		    <section id="Especificació">
 				<h2>Especificació</h2>
+				<ul id="index">
+					<li><a href="#/Especificació-HistoriesUsuari">Històries d'usuari</a></li>
+					<li><a href="#/Especificació-ModelConceptual">Model conceptual</a></li>
+				</ul>
 				
 			</section>
 		    <section id="Especificació-HistoriesUsuari">
@@ -242,21 +245,37 @@
     <section>
 		    <section id="Arquitectura">
 				<h2>Arquitectura</h2>
-				<p>Segueix patrò 3 capes, però no disposa de capa de dades ja que no té persistència</p>
+				<ul id="index">
+					<li><a href="#/Arquitectura-Presentació">Capa de presentació</a></li>
+					<li><a href="#/Arquitectura-Domini">Capa de  domini</a></li> 
+					<li><a href="#/Arquitectura-Desplegament">Model de desplegament</a></li>
+					<li><a href="#/Arquitectura-Distribució">Distribució de l'aplicació</a></li>
+				</ul>
 			</section>
-		    <section>
+		    <section id="Arquitectura-Presentació">
 				<h3>Arquitectura: Presentació</h3>
-				<div class="stretch ">
-
+				<div class="half-block">
+					<img src="annex/disseny_login.png" id="arquitectura-presentacio-disseny" class="fit"/>
+				</div>
+				<div class="half-block">
+					<img src="annex/captura-login.png" id="arquitectura-presentacio-resultat" class="fit"/>
 				</div>
 			</section>
-		    <section>
-				<h3>Arquitectura: Domini</h3>
-				
+		    <section id="Arquitectura-Presentació2">
+				<h3>Arquitectura: Presentació</h3>
+				<img src="annex/disseny_extern.png" class="stretch"/>
 			</section>
-		    <section>
+		    <section id="Arquitectura-Domini">
+				<h3>Arquitectura: Domini</h3>
+				<img src="annex/model_conceptual_disseny.png" class="stretch no-shadow"/>
+			</section>
+		    <section id="Arquitectura-Desplegament">
 				<h3>Arquitectura: Model de desplegament</h3>
-				
+				<img src="annex/desplegament.png" class="stretch no-shadow"/>
+			</section>
+		    <section id="Arquitectura-Distribució">
+				<h3>Arquitectura: Distribució de l'aplicació</h3>
+				<img src="annex/distribucio.png" class="stretch no-shadow"/>
 			</section>
     </section>
 	
@@ -278,7 +297,30 @@
 	
     <section id="Enllaços">
         <h2>Enllaços</h2>
-		
+		<ul>
+			<li><a href="https://itunes.apple.com/es/app/upcnet-utalk/id722772555?mt=8" target="_blank"><img src="annex/app-store.png" id="app-store"/></a></li>
+			<li>
+				<a href="https://www.sharelatex.com/project/51bdefd2302e2422162a4916/download/pdf?cache_bust=" id="url-pdf" target="_blank">
+					Mèmoria <img src="annex/file_extension_pdf.png" id="icon-pdf"/>
+				</a> - 
+				<script type="text/javascript">
+					var e = document.getElementById('url-pdf');
+					e.href += (new Date()).getTime();
+				</script>
+				<a href="https://www.sharelatex.com/project/51bdefd2302e2422162a4916" target="_blank">
+					<img src="annex/latex.gif" id="icon-latex"/>
+				</a>
+			</li> 
+			
+			<li>
+				<a href="https://github.com/nmaletm/Presentacio-TFG" target="_blank">
+					Presentació <img src="annex/github-icon.png" id="icon-github"/>
+				</a>
+			</li>
+		</ul>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<h2 class="fragment">http://tfg.storn.es</h2>
     </section>
 </div>
 
