@@ -14,11 +14,14 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="thirdparty/css/reveal.min.css">
-		<link rel="stylesheet" href="thirdparty/css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="thirdparty/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="thirdparty/reveal.js/css/theme/solarized.css" id="theme">
+
+		<!-- Fonts -->
+		<link rel="stylesheet" href="thirdparty/Font-Awesome/css/font-awesome.min.css">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="thirdparty/lib/css/zenburn.css">
+		<link rel="stylesheet" href="thirdparty/reveal.js/lib/css/zenburn.css">
 
 		<link rel="stylesheet" href="css/custom.css">
 
@@ -26,7 +29,7 @@
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="thirdparty/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write( '<link rel="stylesheet" href="thirdparty/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
 		<!--[if lt IE 9]>
@@ -66,14 +69,14 @@
     <section>
 		<h3>Índex</h3>
 	
-		<ul id="index">
-			<li><a href="#/Client">Client</a></li>
-			<li><a href="#/Projecte">Projecte</a></li>
-			<li><a href="#/Especificació">Especificació</a></li>
-			<li><a href="#/Arquitectura">Arquitectura</a></li>
-			<li><a href="#/Demostracio">Demostració</a></li>
-			<li><a href="#/Conclusions">Conclusions</a></li>
-			<li><a href="#/Enllaços">Enllaços</a></li>
+		<ul id="index" class="fa-ul">
+			<li><i class="fa-li fa fa-square"></i><a href="#/Client">Client</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Projecte">Projecte</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Especificació">Especificació</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Arquitectura">Arquitectura</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Demostracio">Demostració</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Conclusions">Conclusions</a></li>
+			<li><i class="fa-li fa fa-square"></i><a href="#/Enllaços">Enllaços</a></li>
 
 		</ul>
 
@@ -282,8 +285,8 @@
 		<!-- final slides -->
 		</div>
 
-		<script src="thirdparty/lib/js/head.min.js"></script>
-		<script src="thirdparty/js/reveal.min.js"></script>
+		<script src="thirdparty/reveal.js/lib/js/head.min.js"></script>
+		<script src="thirdparty/reveal.js/js/reveal.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 		<script>
@@ -314,12 +317,12 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'thirdparty/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'thirdparty/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'thirdparty/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'thirdparty/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'thirdparty/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'thirdparty/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'thirdparty/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'thirdparty/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'thirdparty/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'thirdparty/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'thirdparty/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'thirdparty/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 			$(document).ready(function(){
