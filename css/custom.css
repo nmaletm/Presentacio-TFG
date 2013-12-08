@@ -23,7 +23,7 @@
 	vertical-align: middle;
 }
 #icon-pdf{
-	vertical-align: sub;
+	vertical-align: middle;
 }
 #icon-latex{
 	height: 40px;
@@ -31,7 +31,7 @@
 }
 #icon-github{
 	height: 32px;
-	vertical-align: sub;
+	vertical-align: middle;
 }
 
 #historia-usuari{
@@ -66,12 +66,28 @@
 	height: 500px;
 }
 
+#Gracies h2{
+	padding-top: 250px;
+}
+
 /* Coses generals */
+
+.reveal ul{
+	width: 100%;
+}
+.reveal p{
+	text-align: left;
+}
+
 .reveal .no-shadow, .reveal a img, .reveal:hover a img{
 	border: 0;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+
+.no-list-style li{
+	list-style-type: none;
 }
 
 .reveal .state-background {
@@ -80,6 +96,14 @@
 
 .reveal ul li{
 	margin-bottom: 30px;
+}
+
+.reveal ul li ul{
+	margin-top: 10px;
+}
+
+.reveal ul li ul li{
+	margin-bottom: 10px;
 }
 
 .reveal .state-background .logo{
