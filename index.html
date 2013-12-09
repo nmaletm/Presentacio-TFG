@@ -98,7 +98,6 @@
 					<li>Social, mòbil i en temps real</li>
 					<li>Espai personal i personalitzable</li>
 					<li>Accés unificat als serveis que s'ofereixen</li>
-
 				</ul>
 			</div>
 		</section>
@@ -119,8 +118,8 @@
 				<h2>Projecte</h2>
 				<ul id="index">
 					<li><a href="#/Projecte-Metodologia">Metodologia</a></li>
-					<li><a href="#/Projecte-Pressupost">Pressupost</a></li>
 					<li><a href="#/Projecte-Planificació">Planificació</a></li>
+					<li><a href="#/Projecte-Pressupost">Pressupost</a></li>
 					<li><a href="#/Projecte-Abast">Abast</a></li>
 					<li><a href="#/Projecte-Sostenibilitat">Sostenibilitat i responsabilitat social</a></li>
 				</ul>
@@ -133,6 +132,22 @@
 					<li>Tecnologia canviant</li>
 					
 				</ul>
+			</section>
+		    <section id="Projecte-Metodologia2">
+				<h3>Projecte: Metodologia</h3>
+				<div class="half-block">
+					<img src="annex/sprint-backlog.png" id="" class="fit"/>
+				</div>
+				<div class="half-block">
+					<img src="annex/sprint-backlog-tasca.png" id="" class="fit"/>
+				</div>
+				<div class="center-half-block">
+					<img src="annex/task-board.jpg" id="" class="fit"/>
+				</div>
+			</section>
+		    <section id="Projecte-Planificació">
+				<h3>Projecte: Planificació</h3>
+				<img src="annex/diagrama_gantt_gran.png" class="stretch"/>
 			</section>
 		    <section id="Projecte-Pressupost">
 				<h3>Projecte: Pressupost</h3>
@@ -187,21 +202,21 @@
 					</table>
 				</div>
 			</section>
-
-		    <section id="Projecte-Planificació">
-				<h3>Projecte: Planificació</h3>
-				<img src="annex/diagrama_gantt_gran.png" class="stretch"/>
-			</section>
 		    <section id="Projecte-Abast">
 				<h3>Projecte: Abast</h3>
 				<img src="annex/abast.png" class="stretch no-shadow"/>
 			</section>
 		    <section id="Projecte-Sostenibilitat">
-				<h3>Projecte: Sostenibilitat i responsabilitat social</h3>
+				<h3>Projecte: Sostenibilitat, responsabilitat social i legislació</h3>
 				<ul>
-					<li>LOPD</li>
-					<li>Mal ús del sistema</li>
-				</ul>
+					<li>Poc impacte medioambiental.</li>
+					<li>Millora  la comunicació i fomenta la col·laboració.</li>
+					<li>Legislació:
+						<ul>
+							<li>LOPD</li>
+							<li>Mal ús del sistema</li>
+						</ul>
+					</li>
 			</section>
     </section>
 
@@ -290,14 +305,7 @@
 	
 	<!-- Canvi de block -->
 	
-    <section id="Demostració">
-        <h2>Demostració</h2>
-		<video class="video-demo" src="annex/demo.mov"></video>
-    </section>
-
-	<!-- Canvi de block -->
-	
-    <section id="Conclusions">
+	<section id="Conclusions">
         <h2>Conclusions</h2>
 		<ul>
 			<li>S'han complert tots els objectius del projecte.</li>
@@ -310,6 +318,15 @@
 			</li>
 			<li>Relació client - equip SOM (reunions).</li>
 		</ul>	
+    </section>
+
+	<!-- Canvi de block -->
+
+    <section id="Demostració">
+        <h2>Demostració</h2>
+		<video id="video-demo" class="stretch no-shadow fragment fade-in">
+			<source src="annex/video.mp4" type="video/mp4">
+  		</video>
     </section>
 
 	<!-- Canvi de block -->
@@ -392,6 +409,20 @@
 					{ src: 'thirdparty/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+			Reveal.addEventListener( 'fragmentshown', function( event ) {
+				var e = event.fragment;
+				if(e.id == "video-demo"){
+					e.play();
+					e.currentTime = 0;
+				}
+			} );
+			Reveal.addEventListener( 'fragmenthidden', function( event ) {
+				var e = event.fragment;
+				if(e.id == "video-demo"){
+					e.pause();
+				}
+			} );
+
 			$(document).ready(function(){
 			    $("table tr:even").addClass("even");
 			});
