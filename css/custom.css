@@ -93,16 +93,16 @@
 
 #product-backlog{
 	position: absolute;
-	top: 60px;
-	left: 100px;
-	height: 350px;
+	top: 100px;
+	left: 50px;
+	height: 400px;
 }
 
 #daily-scrum{
 	position: absolute;
-	top: 100px;
-	left: 0px;
-	height: 320px;
+	top: 150px;
+	left: 50px;
+	height: 600px;
 }
 #task-board-trello{
 	position: absolute;
@@ -121,21 +121,33 @@
 	position: absolute;
 	top: 200px;
 	margin: 0 auto;
-	height: 300px;
-	max-height: 1000%;
-	max-width: 1000%;
+	width: 100%;
+	right: 0px;
 }
-
-@keyframes move {
+@keyframes move-scrum-diagram {
 	100% {
-		bottom: 0px;
-		right: 0px;
-		height: 275px;
-		left: 130px;
+		top: 400px;
+		width: 500px;
 	}
 }
-.scrum-diagram-small{
-	animation: move 2s ease;
+@-moz-keyframes move-scrum-diagram {
+	100% {
+		top: 400px;
+		width: 500px;
+	}
+}
+
+@-webkit-keyframes move-scrum-diagram {
+	100% {
+		top: 400px;
+		width: 500px;
+	}
+}
+
+#scrum-diagram.scrum-diagram-small{
+	animation: move-scrum-diagram 2s ease forwards;
+	-moz-animation: move-scrum-diagram 2s ease forwards;
+	-webkit-animation: move-scrum-diagram 2s ease forwards;
 }
 
 #scrum-postits{ /* real size: 909x269 */
@@ -159,6 +171,12 @@
 
 
 /* Coses generals */
+
+.reveal .absolute-image{
+	max-height: 1000%;
+	max-width: 1000%;
+}
+
 .reveal blockquote:before {
 	content: '\201C';
 }
