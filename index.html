@@ -44,12 +44,6 @@
 <div class="state-background"><div class="logo"></div></div>
 <!-- inici slides -->
 <div class="slides">
-    <section id="Intro">
-		<p>&nbsp;</p>
-		<p id="capsa-app-intro"><img src="annex/logo_app.png" class="no-shadow"/><span>UPCnet uTalk</span></p>
-		<p>&nbsp;</p>
-		<p><a href="https://itunes.apple.com/es/app/upcnet-utalk/id722772555?mt=8" target="_blank"><img src="annex/app-store.png" id="app-store"/></a></p>
-    </section>
 
 	<!-- Canvi de block -->
 
@@ -74,7 +68,20 @@
 
 	<!-- Canvi de block -->
 
+	<section id="Intro">
+		<p>&nbsp;</p>
+		<p id="capsa-app-intro">
+			<img src="annex/logo_app.png" class="no-shadow"/>
+			<span>UPCnet uTalk</span><br>
+			<p>App d'iOS de la xarxa social de la UPC.</p>
+		</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><a href="https://itunes.apple.com/es/app/upcnet-utalk/id722772555?mt=8" target="_blank"><img src="annex/app-store.png" id="app-store"/></a></p>
+    </section>
 
+	<!-- Canvi de block -->
+	
     <section id="Índex">
 		<h3>Índex</h3>
 	
@@ -97,10 +104,13 @@
 			<p><img src="annex/logo_upcnet.png" id="logo-upcnet" class="no-shadow"/></p>
 			<p><img src="annex/logo_somupc.png" id="logo-somupc" class="fragment no-shadow"/></p>
 
-			<blockquote class="fragment">
-				<b>Premi Davyd Luque</b>: UPCesfer@ <sup>2008</sup>, Directori UPC <sup>2009</sup>, U4U - University for you <sup>2011</sup>
-			</blockquote>
-
+			<div class="fragment"><p><b>Premi Davyd Luque</b>:</p>
+				<ul>
+					<li>UPCesfer@ (2008)</li>
+					<li>Directori UPC (2009)</li>
+					<li>U4U - University for you (2011)</li>
+				</ul>
+			</div>
 		</section>
 		<section id="Introduccio-MAX">
 			<h2>MAX: Motor d'activitat social</h2>
@@ -137,15 +147,16 @@
 				<img src="annex/postits.png" id="scrum-postits" class="no-shadow fit"/>
 				<p id="scrum-text">Scrum</p>
 			</section>
-		    <section id="Projecte-Metodologia2">
+		    <section id="Projecte-Metodologia-Scrum">
 				<h3>Projecte: Scrum</h3>
-				<img src="annex/scrum.png" id="" class="no-shadow fit"/>
-				<img src="annex/product-backlog.png" id="product-backlog" class="fragment"/>
-				<div class="fragment">
+				<p>&nbsp;</p>
+				<img src="annex/scrum.png" id="scrum-diagram" class="no-shadow fit"/>
+				<img src="annex/product-backlog.png" id="product-backlog" class="fragment current-visible"/>
+				<div class="fragment current-visible">
 					<img src="annex/task-board.jpg" id="task-board-fisic"/>
 					<img src="annex/sprint-backlog.png" id="task-board-trello"/>
 				</div>
-				<img src="annex/daily.jpg" id="daily-scrum" class="fragment"/>
+				<img src="annex/daily.jpg" id="daily-scrum" class="fragment current-visible"/>
 			</section>
 		    <section id="Projecte-Abast">
 				<h3>Projecte: Abast</h3>
@@ -209,16 +220,12 @@
 				</div>
 			</section>
 		    <section id="Projecte-Sostenibilitat">
-				<h3>Projecte: Sostenibilitat, responsabilitat social i legislació</h3>
+				<h3>Projecte: Compromís social</h3>
+				<p>&nbsp;</p>
 				<ul>
-					<li>Poc impacte medioambiental.</li>
-					<li>Millora  la comunicació i fomenta la col·laboració.</li>
-					<li>Legislació:
-						<ul>
-							<li>LOPD</li>
-							<li>Mal ús del sistema</li>
-						</ul>
-					</li>
+					<li>Millorar la comunicació.</li>
+					<li>Fomentar la col·laboració.</li>
+				</ul>
 			</section>
     </section>
 
@@ -307,14 +314,10 @@
 				<h3>Arquitectura: Presentació</h3>
 				<img src="annex/disseny_extern.png" class="stretch"/>
 			</section>
-		    <section id="Arquitectura-Domini">
-				<h3>Arquitectura: Domini</h3>
-				<img src="annex/model_conceptual_disseny.png" class="stretch no-shadow"/>
-			</section>
 		    <section id="Arquitectura-Distribució">
 				<h3>Arquitectura: Distribució de l'aplicació</h3>
 				<div class="half-block">
-						<img src="annex/logo-appstore.png" id="" class="no-shadow fit"/>
+						<img src="annex/logo-appstore.png" id="logo-appstore" class="no-shadow fit"/>
 				</div>
 				<div class="half-block">
 						<img src="annex/logo-testflight.png" id="" class="no-shadow fit"/>
@@ -339,12 +342,12 @@
 	<section id="Conclusions">
         <h2>Conclusions</h2>
 		<ul>
-			<li>S'han complert tots els objectius del projecte.</li>
+			<li>L'aplicació està disponible a l'<i>App Store</i></li>
 			<li>La metodologia <i>scrum</i> ha ajudat a ...
 				<ul class="no-list-style">
 					<li>... finalitzar un projecte inicialment poc definit.</li>
 					<li>... adaptar el projecte a les necessitats canviants del client.</li>
-					<li>... aconseguir un millor producte final.</li>
+					<li>... aconseguir un producte millor per a l'usuari final.</li>
 				</ul>
 			</li>
 		</ul>	
@@ -406,11 +409,17 @@
 					e.play();
 					e.currentTime = 0;
 				}
+				if(e.id == "product-backlog"){
+					$("#scrum-diagram").addClass("scrum-diagram-small");
+				}
 			} );
 			Reveal.addEventListener( 'fragmenthidden', function( event ) {
 				var e = event.fragment;
 				if(e.id == "video-demo"){
 					e.pause();
+				}
+				if(e.id == "product-backlog"){
+					$("#scrum-diagram").removeClass("scrum-diagram-small");
 				}
 			} );
 

@@ -28,6 +28,11 @@
 	height: 80px;
 	vertical-align: middle;
 }
+
+#logo-appstore{
+	height: 150px;
+}
+
 #icon-pdf{
 	vertical-align: middle;
 }
@@ -80,6 +85,7 @@
 	height: 200px;
 	vertical-align: middle;
 	padding-right: 20px;
+	float: left;
 }
 #capsa-app-intro{
 	font-size: 2em;
@@ -89,26 +95,47 @@
 	position: absolute;
 	top: 60px;
 	left: 100px;
-	height: 200px;
+	height: 350px;
 }
 
 #daily-scrum{
 	position: absolute;
-	top: 80px;
-	right: 100px;
-	height: 140px;
+	top: 100px;
+	left: 0px;
+	height: 320px;
 }
 #task-board-trello{
 	position: absolute;
-	top: 500px;
-	right: 160px;
-	height: 140px;
+	top: 0px;
+	right: -10px;
+	height: 275px;
 }
 #task-board-fisic{
 	position: absolute;
-	top: 500px;
-	left: 160px;
-	height: 140px;
+	top: 0px;
+	left: -10px;
+	height: 275px;
+}
+
+#scrum-diagram{
+	position: absolute;
+	top: 200px;
+	margin: 0 auto;
+	height: 300px;
+	max-height: 1000%;
+	max-width: 1000%;
+}
+
+@keyframes move {
+	100% {
+		bottom: 0px;
+		right: 0px;
+		height: 275px;
+		left: 130px;
+	}
+}
+.scrum-diagram-small{
+	animation: move 2s ease;
 }
 
 #scrum-postits{ /* real size: 909x269 */
@@ -128,6 +155,8 @@
 	font-size: 3em;
 	text-align: center;
 }
+
+
 
 /* Coses generals */
 .reveal blockquote:before {
@@ -288,6 +317,10 @@
 
 .reveal .medium-image{
 	height: 250px;
+}
+
+.reveal .progress {
+	height: 6px;
 }
 
 /* Tables */
