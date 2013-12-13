@@ -124,11 +124,11 @@
 	width: 100%;
 	right: 0px;
 
-	-webkit-transition: all .5s linear;
-	-moz-transition: all .5s linear;
-	-ms-transition: all .5s linear;
-	-o-transition: all .5s linear;
-	transition: all .5s linear;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
 }
 #scrum-diagram.scrum-diagram-small{
 	top: 400px;
