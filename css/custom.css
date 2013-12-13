@@ -157,7 +157,84 @@
 	font-size: 3em;
 }
 
+#abast-somupc-marc, #abast-tfg-marc{
+	position: absolute; 
+    border: 4px solid #999;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    border-radius: 50px 50px 50px 50px;
+}
+#abast-somupc-marc{
+	height: 300px;
+	left: 120px;
+	top: 380px;
+	width: 800px;
+}
+
+#abast-tfg-marc{
+	height: 300px;
+	left: 120px;
+	top: 380px;
+	width: 200px;
+}
+
+#abast{
+	height: 550px;
+}
+
+#desplegament{
+	width: 100%;
+}
+
+#desplegament-max-ombra{
+	height: 150px;
+	left: 380px;
+	top: 80px;
+	width: 150px;
+}
+#desplegament-oauth-ombra{
+	height: 150px;
+	left: 10px;
+	top: 370px;
+	width: 150px;
+}
+#desplegament-apns-ombra{
+	height: 150px;
+	left: 60px;
+	top: 210px;
+	width: 150px;
+}
+#desplegament-protocolsMax-ombra{
+	height: 130px;
+	left: 280px;
+	top: 190px;
+	width: 300px;
+}
+#desplegament-portals-ombra{
+	height: 470px;
+	right: 0;
+	top: 120px;
+	width: 310px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
 /* Coses generals */
+
+.reveal .ombra{
+	position: absolute;
+	background: rgba(155,155,155,0.3);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 20px  rgba(155,155,155,0.3);
+    z-index: -1;
+}
+
+.reveal .slide-number {
+    font-size: large;
+    font-weight: bold;
+}
 
 .reveal .absolute-image{
 	max-height: 1000%;
@@ -186,6 +263,7 @@
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	background: none;
 }
 
 .no-list-style li{
