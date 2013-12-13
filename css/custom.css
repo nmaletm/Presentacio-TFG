@@ -87,12 +87,6 @@
 	padding-right: 20px;
 	float: left;
 }
-#capsa-app-intro .info{
-	height: 400px;
-	vertical-align: middle;
-	padding-right: 20px;
-	float: right;
-}
 #capsa-app-intro .titol{
 	font-size: 2em;
 	text-align: left;
@@ -100,6 +94,12 @@
 #capsa-app-intro .subtitol{
 	font-size: 1em;
 	text-align: left;
+}
+#info-login{
+	height: 400px;
+	position: absolute;
+	top: 250px;
+	right: 300px;
 }
 
 
