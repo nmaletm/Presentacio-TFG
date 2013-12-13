@@ -70,11 +70,12 @@
 
 	<section id="Intro">
 		<p>&nbsp;</p>
-		<p id="capsa-app-intro">
-			<img src="annex/logo_app.png" class="no-shadow"/>
-			<span>UPCnet uTalk</span><br>
-			<p>App d'iOS de la xarxa social de la UPC.</p>
-		</p>
+		<div id="capsa-app-intro">
+			<img src="annex/logo_app.png" class="logo no-shadow"/>
+			<img src="annex/info-login.png" class="info no-shadow"/>
+			<p class="titol">UPCnet uTalk</p>
+			<p class="subtitol">App d'iOS de la xarxa social de la UPC.</p>
+		</div>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
 		<p><a href="https://itunes.apple.com/es/app/upcnet-utalk/id722772555?mt=8" target="_blank"><img src="annex/app-store.png" id="app-store"/></a></p>
@@ -86,9 +87,9 @@
 		<h3>Índex</h3>
 	
 		<ul id="index">
-			<li><a href="#/Projecte">Introducció</a></li>
+			<li><a href="#/Introduccio">Introducció</a></li>
 			<li><a href="#/Projecte">Projecte</a></li>
-			<li><a href="#/Especificació">Especificació</a></li>
+			<li><a href="#/Especificacio">Especificació</a></li>
 			<li><a href="#/Arquitectura">Arquitectura</a></li>
 			<li><a href="#/Demostracio">Demostració</a></li>
 			<li><a href="#/Conclusions">Conclusions</a></li>
@@ -151,11 +152,13 @@
 			<h3>Projecte: Scrum</h3>
 			<img src="annex/scrum.png" id="scrum-diagram" class="no-shadow fit absolute-image"/>
 			<img src="annex/product-backlog.png" id="product-backlog" class="fragment current-visible absolute-image"/>
+			<img src="annex/sprint-planning.jpg" id="sprint-planning" class="fragment current-visible absolute-image"/>
 			<div class="fragment current-visible">
 				<img src="annex/task-board.jpg" id="task-board-fisic" class="absolute-image"/>
 				<img src="annex/sprint-backlog.png" id="task-board-trello" class="absolute-image"/>
 			</div>
 			<img src="annex/daily.jpg" id="daily-scrum" class="fragment current-visible absolute-image"/>
+			<img src="annex/demo.jpg" id="sprint-demo" class="fragment current-visible absolute-image"/>
 		</section>
 		<section id="Projecte-Abast">
 			<h3>Projecte: Abast</h3>
@@ -225,20 +228,20 @@
 	<!-- Canvi de block -->
 	
     <section>
-		<section id="Especificació">
+		<section id="Especificacio">
 			<h2>Especificació</h2>
 			<ul id="index">
-				<li><a href="#/Especificació-RequisitsNoFuncionals">Requisits funcionals</a>
+				<li><a href="#/Especificacio-RequisitsNoFuncionals">Requisits funcionals</a>
 					<ul>
-						<li><a href="#/Especificació-HistoriesUsuari">Històries d'usuari</a></li>
-						<li><a href="#/Especificació-ModelConceptual">Model conceptual</a></li>
+						<li><a href="#/Especificacio-HistoriesUsuari">Històries d'usuari</a></li>
+						<li><a href="#/Especificacio-ModelConceptual">Model conceptual</a></li>
 					</ul>
 				</li>
-				<li><a href="#/Especificació-RequisitsNoFuncionals">Requisits no funcionals</a></li>
+				<li><a href="#/Especificacio-RequisitsNoFuncionals">Requisits no funcionals</a></li>
 			</ul>
 			
 		</section>
-		<section id="Especificació-HistoriesUsuari">
+		<section id="Especificacio-HistoriesUsuari">
 			<h3>Especificació: Històries d'usuari</h3>
 			<div id="historia-usuari">
 				<div><span class="cap">9. Afegir una subscripció</span></div>
@@ -265,11 +268,11 @@
 				</div>
 			</div>
 		</section>
-		<section id="Especificació-ModelConceptual">
+		<section id="Especificacio-ModelConceptual">
 			<h3>Especificació: Model conceptual</h3>
 			<img src="annex/model_conceptual_especificacio.png" class="stretch no-shadow"/>
 		</section>
-		<section id="Especificació-RequisitsNoFuncionals">
+		<section id="Especificacio-RequisitsNoFuncionals">
 			<h3>Especificació: Requisits no funcionals</h3>
 			<p>&nbsp;</p>
 			<div id="historia-usuari">
@@ -308,8 +311,8 @@
 			<h3>Arquitectura: Presentació</h3>
 			<img src="annex/disseny_extern.png" class="stretch"/>
 		</section>
-		<section id="Projecte-Desplegament">
-			<h3>Projecte: Desplegament</h3>
+		<section id="Arquitectura-Desplegament">
+			<h3>Arquitectura: Desplegament</h3>
 			<span id="desplegament-max-ombra" class="fragment current-visible absolute-image ombra"></span>
 			<span id="desplegament-protocolsMax-ombra" class="fragment current-visible absolute-image ombra"></span>
 			<span id="desplegament-oauth-ombra" class="fragment current-visible absolute-image ombra"></span>
@@ -334,7 +337,7 @@
 	
 	<!-- Canvi de block -->
 
-    <section id="Demostració">
+    <section id="Demostracio">
         <h2>Demostració</h2>
 		<video id="video-demo" class="stretch no-shadow fragment fade-in">
 			<source src="annex/video.mp4" type="video/mp4">
@@ -346,15 +349,18 @@
 	<section id="Conclusions">
         <h2>Conclusions</h2>
 		<ul>
-			<li>L'aplicació està disponible a l'<i>App Store</i></li>
-			<li>La metodologia <i>scrum</i> ha ajudat a ...
+			<li>L'aplicació està disponible a l'<i>App Store</i>.</li>
+			<li><i>Scrum</i> ha ajudat a ...
 				<ul class="no-list-style">
-					<li>... finalitzar un projecte inicialment poc definit.</li>
-					<li>... adaptar el projecte a les necessitats canviants del client.</li>
-					<li>... aconseguir un producte millor per a l'usuari final.</li>
+					<li>... adaptar-se a les necessitats canviants.</li>
+					<li>... produir un producte millor per a l'usuari.</li>
 				</ul>
 			</li>
-		</ul>	
+			<li>Gran evolució del producte final (SomUPC).</li>
+			<li>L'aplicació ja s'ha implantat a dues comunitats.</li>
+		</ul>
+		<p>&nbsp;</p>
+		<h3 class="fragment">Línies de futur</h3>
     </section>
 
 	<!-- Canvi de block -->
@@ -369,7 +375,7 @@
 
 		<script src="thirdparty/reveal.js/lib/js/head.min.js"></script>
 		<script src="thirdparty/reveal.js/js/reveal.min.js"></script>
-		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 		<script>
 

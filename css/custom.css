@@ -81,15 +81,27 @@
 
 }
 
-#capsa-app-intro img{
+#capsa-app-intro .logo{
 	height: 200px;
 	vertical-align: middle;
 	padding-right: 20px;
 	float: left;
 }
-#capsa-app-intro{
-	font-size: 2em;
+#capsa-app-intro .info{
+	height: 400px;
+	vertical-align: middle;
+	padding-right: 20px;
+	float: right;
 }
+#capsa-app-intro .titol{
+	font-size: 2em;
+	text-align: left;
+}
+#capsa-app-intro .subtitol{
+	font-size: 1em;
+	text-align: left;
+}
+
 
 #product-backlog{
 	position: absolute;
@@ -100,9 +112,9 @@
 
 #daily-scrum{
 	position: absolute;
-	top: 100px;
-	left: 0px;
-	height: 350px;
+	top: 120px;
+	left: 50px;
+	height: 300px;
 }
 #task-board-trello{
 	position: absolute;
@@ -115,6 +127,18 @@
 	top: 400px;
 	left: 0px;
 	height: 250px;
+}
+#sprint-planning{
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	height: 400px;
+}
+#sprint-demo{
+	position: absolute;
+	top: 120px;
+	left: 50px;
+	height: 300px;
 }
 
 #scrum-diagram{
