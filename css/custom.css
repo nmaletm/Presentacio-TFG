@@ -81,6 +81,19 @@
 
 }
 
+#Introduccio-MAX{
+	text-align: center;
+}
+#intro_activitat{
+	padding-top: 30px;
+}
+#intro_conversa{
+	padding-top: 40px;
+}
+#intro_max_motor{
+	padding-top: 40px;
+}
+
 #capsa-app-intro .logo{
 	height: 200px;
 	vertical-align: middle;
@@ -99,7 +112,7 @@
 	height: 400px;
 	position: absolute;
 	top: 250px;
-	right: 300px;
+	right: 100px;
 }
 
 
@@ -244,6 +257,20 @@
 	border-radius: 50px;
 }
 /* Coses generals */
+
+.reveal .single-element-slide{
+	max-height: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.reveal .fragment.current-visible,
+.reveal .fragment.fade-out.visible{
+    display: none;
+}
+.reveal .fragment.current-visible.current-fragment {
+    display: block;
+}
 
 .reveal .ombra{
 	position: absolute;
