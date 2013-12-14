@@ -110,52 +110,44 @@
 }
 #info-login{
 	height: 400px;
-	position: absolute;
 	top: 250px;
 	right: 100px;
 }
 
 
 #product-backlog{
-	position: absolute;
 	top: 100px;
 	left: 50px;
 	height: 400px;
 }
 
 #daily-scrum{
-	position: absolute;
 	top: 120px;
 	left: 50px;
 	height: 300px;
 }
 #task-board-trello{
-	position: absolute;
 	top: 80px;
 	left: 0px;
 	height: 300px;
 }
 #task-board-fisic{
-	position: absolute;
 	top: 400px;
 	left: 0px;
 	height: 250px;
 }
 #sprint-planning{
-	position: absolute;
 	top: 100px;
 	left: 50px;
 	height: 400px;
 }
 #sprint-demo{
-	position: absolute;
 	top: 120px;
 	left: 50px;
 	height: 300px;
 }
 
 #scrum-diagram{
-	position: absolute;
 	top: 100px;
 	margin: 0 auto;
 	width: 100%;
@@ -173,7 +165,6 @@
 }
 
 #scrum-postits{ /* real size: 909x269 */
-	position: absolute;
 	top: 200px;
 	left: 20px;
 	width: 900px;
@@ -182,7 +173,6 @@
 	max-width: 1000%;
 }
 #scrum-text{
-	position: absolute; 
 	top: 250px;
 	left: 0;
 	width: 100%;
@@ -195,7 +185,6 @@
 }
 
 #abast-somupc-marc, #abast-tfg-marc{
-	position: absolute; 
     border: 4px solid #999;
     -webkit-border-radius: 50px 50px 50px 50px;
     -moz-border-radius: 50px 50px 50px 50px;
@@ -257,6 +246,9 @@
 	border-radius: 50px;
 }
 /* Coses generals */
+.reveal .absolute-element{
+	position: absolute;
+}
 
 .reveal .single-element-slide{
 	max-height: 100%;
@@ -273,7 +265,6 @@
 }
 
 .reveal .ombra{
-	position: absolute;
 	background: rgba(155,155,155,0.3);
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -287,7 +278,7 @@
     font-weight: bold;
 }
 
-.reveal .absolute-image{
+.reveal .absolute-element{
 	max-height: 1000%;
 	max-width: 1000%;
 }
@@ -374,20 +365,14 @@
 		transform:  scale(0.2);  -moz-transform:  scale(0.2); -webkit-transform:  scale(0.2); 
 	}
 }
+@media print{
+	.reveal .absolute-element{
+		position: static;
+	}
+}
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
 	text-transform: none;
-}
-
-
-.reveal .modal-image > span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding-top: 80px;
-	width: 100%;
-	height: 100%;
-	margin: 0px auto
 }
 
 .reveal .span-fragment{
