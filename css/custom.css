@@ -344,25 +344,25 @@
 
 @media only screen and (min-width: 1200px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.5); -moz-transform:  scale(0.5); -webkit-transform:  scale(0.5); 
+		transform:  scale(0.4); -moz-transform:  scale(0.4); -webkit-transform:  scale(0.4); 
 	}
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.4);  -moz-transform:  scale(0.4); -webkit-transform:  scale(0.4); 
+		transform:  scale(0.3);  -moz-transform:  scale(0.3); -webkit-transform:  scale(0.3); 
 	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 800px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.3);  -moz-transform:  scale(0.3); -webkit-transform:  scale(0.3); 
+		transform:  scale(0.2);  -moz-transform:  scale(0.2); -webkit-transform:  scale(0.2); 
 	}
 }
 
 @media only screen and (max-width: 480px) {
 	.reveal .state-background .logo{
-		transform:  scale(0.2);  -moz-transform:  scale(0.2); -webkit-transform:  scale(0.2); 
+		transform:  scale(0.15);  -moz-transform:  scale(0.15); -webkit-transform:  scale(0.15); 
 	}
 }
 @media print{
@@ -439,7 +439,7 @@
 }
 
 .reveal .progress {
-	height: 6px;
+	height: 10px;
 }
 
 /* Tables */
