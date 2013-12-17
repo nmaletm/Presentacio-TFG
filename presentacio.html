@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>StreamUPC - Presentació</title>
+
+		<meta name="description" content="Presentació TFG">
+		<meta name="author" content="Néstor Malet">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="thirdparty/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="thirdparty/reveal.js/css/theme/solarized.css" id="theme">
+
+		<!-- Fonts -->
+		<!--<link rel="stylesheet" href="thirdparty/Font-Awesome/css/font-awesome.min.css">-->
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="thirdparty/reveal.js/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+
+		<link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="thirdparty/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal reveal-viewport">
+
+<div class="state-background"><div class="logo"></div></div>
+<!-- inici slides -->
+<div class="slides">
+
+	<!-- Canvi de block -->
+
+    <section id="Portada">
+        <h1>StreamUPC <br>Un nou concepte de <br>col·laboració<br></h1>
+        <p>&nbsp;</p>
+        <h3>Néstor Malet Montolío</h3>
+        <p>&nbsp;</p>
+        <div class="third-block">
+        	<h4>Director</h4>
+        	Jaume Moral <br>Ros
+        </div>
+        <div class="third-block">
+        	<h4>Co-Director</h4>
+        	Albert Obiols <br>Vives
+        </div>
+        <div class="third-block">
+        	<h4>Ponent</h4>
+        	Josep Casanovas <br>Garcia
+        </div>
+    </section>
+
+	<!-- Canvi de block -->
+
+	<section id="Intro">
+		<p>&nbsp;</p>
+		<div id="capsa-app-intro">
+			<img src="annex/logo_app.png" class="logo no-shadow"/>
+			<p class="titol">UPCnet uTalk</p>
+			<p class="subtitol">App d'iOS de la xarxa social de la UPC.</p>
+		</div>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><a href="https://itunes.apple.com/es/app/upcnet-utalk/id722772555?mt=8" target="_blank"><img src="annex/app-store.png" id="app-store"/></a></p>
+		<img src="annex/info-login.png" id="info-login" class="fragment no-shadow absolute-element"/>
+    </section>
+
+	<!-- Canvi de block -->
+	
+    <section id="Índex">
+		<h3>Índex</h3>
+	
+		<ul id="index">
+			<li><a href="#/Introduccio">Introducció</a></li>
+			<li><a href="#/Projecte">Gestió del projecte</a></li>
+			<li><a href="#/Especificacio">Especificació</a></li>
+			<li><a href="#/Arquitectura">Arquitectura</a></li>
+			<li><a href="#/Demostracio">Demostració</a></li>
+			<li><a href="#/Conclusions">Conclusions</a></li>
+		</ul>
+
+	</section>
+
+	<!-- Canvi de block -->
+	
+    <section>
+	    <section id="Introduccio">
+			<h2>Introducció</h2>
+			<p><img src="annex/logo_upcnet.png" id="logo-upcnet" class="no-shadow"/></p>
+			<p><img src="annex/logo_somupc.png" id="logo-somupc" class="fragment no-shadow"/></p>
+
+			<div class="fragment"><p><b>Premi Davyd Luque</b>:</p>
+				<ul>
+					<li>UPCesfer@ (2008)</li>
+					<li>Directori UPC (2009)</li>
+					<li>U4U - University for you (2011)</li>
+				</ul>
+			</div>
+		</section>
+		<section id="Introduccio-MAX">
+			<h2>MAX: Motor d'activitat social</h2>
+
+			<img src="annex/max-motor.png" data-fragment-index="1" id="intro_max_motor" class="no-shadow fragment fade-out single-element-slide"/>
+
+			<img src="annex/intro_1.png" data-fragment-index="1" class="no-shadow fragment current-visible single-element-slide"/>
+			<img src="annex/intro_2.png" data-fragment-index="2" class="no-shadow fragment current-visible single-element-slide"/>
+			<img src="annex/intro_3.png" data-fragment-index="3" class="no-shadow fragment current-visible single-element-slide"/>
+			<img src="annex/intro_4.png" data-fragment-index="4" class="no-shadow fragment current-visible single-element-slide"/>
+			<div class="fragment fade-out" data-fragment-index="5">
+				<img src="annex/activitat.png" id="intro_activitat" data-fragment-index="3" class="no-shadow fragment single-element-slide"/>
+			</div>
+			<img src="annex/conversa.png" data-fragment-index="5" id="intro_conversa" class="no-shadow fragment current-visible single-element-slide"/>
+		</section>
+		<section id="Introduccio-App">
+			<h2><img src="annex/logo_utalk.png" id="logo-somupc" class="no-shadow"/></h2>
+			<div class="half-block">
+				<img src="annex/captura-veure-activitat.png" class="no-shadow capture"/>
+			</div>
+			<div class="half-block">
+				<img src="annex/captura-conversa-missatges.png" class="no-shadow capture"/>
+			</div>
+		</section>
+		
+	</section>
+	
+	<!-- Canvi de block -->
+	
+    <section>
+		<section id="Projecte">
+			<h2 class="vertical-center">Gestió del projecte</h2>
+		</section>
+		<section id="Projecte-Metodologia">
+			<h3>Projecte: Metodologia</h3>
+			<img src="annex/postits.png" id="scrum-postits" class="no-shadow fit absolute-element"/>
+			<p id="scrum-text" class="absolute-element">Scrum</p>
+		</section>
+		<section id="Projecte-Metodologia-Scrum">
+			<h3>Projecte: Scrum</h3>
+			<img src="annex/scrum.png" id="scrum-diagram" class="no-shadow fit absolute-element"/>
+			<img src="annex/product-backlog.png" id="product-backlog" class="fragment current-visible absolute-element"/>
+			<img src="annex/sprint-planning.jpg" id="sprint-planning" class="fragment current-visible absolute-element"/>
+			<div class="fragment current-visible">
+				<img src="annex/task-board.jpg" id="task-board-fisic" class="absolute-element"/>
+				<img src="annex/sprint-backlog.png" id="task-board-trello" class="absolute-element"/>
+			</div>
+			<img src="annex/daily.jpg" id="daily-scrum" class="fragment current-visible absolute-element"/>
+			<img src="annex/demo.jpg" id="sprint-demo" class="fragment current-visible absolute-element"/>
+		</section>
+		<section id="Projecte-Abast">
+			<h3>Projecte: Abast</h3>
+			<img src="annex/abast.png" id="abast" class="no-shadow"/>
+			<span id="abast-somupc-marc" class="fragment current-visible absolute-element"></span>
+			<span id="abast-tfg-marc" class="fragment current-visible absolute-element"></span>
+		</section>
+		<section id="Projecte-Planificació">
+			<h3>Projecte: Planificació</h3>
+			<img src="annex/diagrama_gantt_gran.png" class="stretch"/>
+		</section>
+		<section id="Projecte-Costos">
+			<h3>Projecte: Costos</h3>
+			<div class="half-block">
+				<h4>Costos directes</h4>
+				<table cellspacing='0' class="decorated">
+					<thead>
+						<tr>
+							<th>Recursos</th>
+							<th>Cost</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Humans</td>
+							<td style="text-align: right;">11.205 &euro;</td>
+						</tr>
+						<tr>
+							<td>Materials</td>
+							<td style="text-align: right;">56 &euro;</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td style="text-align: right;">11.261 &euro;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="half-block fragment">
+				<h4>Cost total</h4>
+				<table cellspacing='0' class="decorated">
+					<thead>
+						<tr>
+							<th>Costos</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Directes</td>
+							<td style="text-align: right;">11.261 &euro;</td>
+						</tr>
+						<tr>
+							<td>Indirectes</td>
+							<td style="text-align: right;">788 &euro;</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td style="text-align: right;">12.049 &euro;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+    </section>
+
+	<!-- Canvi de block -->
+	
+    <section>
+		<section id="Especificacio">
+			<h2>Especificació</h2>
+			<ul id="index">
+				<li><a href="#/Especificacio-RequisitsNoFuncionals">Requisits funcionals</a>
+					<ul>
+						<li><a href="#/Especificacio-HistoriesUsuari">Històries d'usuari</a></li>
+						<li><a href="#/Especificacio-ModelConceptual">Model conceptual</a></li>
+					</ul>
+				</li>
+				<li><a href="#/Especificacio-RequisitsNoFuncionals">Requisits no funcionals</a></li>
+			</ul>
+			
+		</section>
+		<section id="Especificacio-HistoriesUsuari">
+			<h3>Especificació: Històries d'usuari</h3>
+			<div id="historia-usuari">
+				<div><span class="cap">9. Afegir una subscripció</span></div>
+				<div>
+					<span>
+						<b>Com a</b> usuari registrat <b>jo vull</b> afegir noves subscripcions <b>per a poder</b> veure les activitats
+						publicades a un espai del que ara no estic subscrit.
+					</span>
+				</div>
+				<div>
+					<span class="cap" style="width: 10%">Prioritat:</span><span>65</span>
+				</div>
+				<div><span class="cap">Criteris d’acceptació:</div>
+				<div>
+					<span>
+						<ul>
+							<li>Vull afegir una nova subscripció a un context.</li>
+							<li>No he de poder subscriurem a un context que no sigui públic.</li>
+							<li>Se m’ha de confirmar si realment vull subscriurem al context.</li>
+							<li>Si accepto, s’ha de crear la subscripció al context.</li>
+							<li>Si cancel·lo, no s’ha de crear la subscripció.</li>
+						</ul>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section id="Especificacio-ModelConceptual">
+			<h3>Especificació: Model conceptual</h3>
+			<img src="annex/model_conceptual_especificacio.png" class="stretch no-shadow"/>
+		</section>
+		<section id="Especificacio-RequisitsNoFuncionals">
+			<h3>Especificació: Requisits no funcionals</h3>
+			<p>&nbsp;</p>
+			<div id="historia-usuari">
+				<div>
+					<span class="cap" style="width: 20%">ReqNF. #:</span><span>4</span>
+				</div>
+				<div><span class="cap">Nom:</div>
+				<div>
+					<span>Complir la <i>App Review Guidelines</i></span>
+				</div>
+				<div><span class="cap">Descripció:</div>
+				<div>
+					<span>El producte s'ha d’adaptar a la guia de revisió d’aplicacions d'<i>Apple</i> (<i>App Review Guidelines</i>)</span>
+				</div>
+			</div>
+		</section>
+
+    </section>
+
+	<!-- Canvi de block -->
+	
+    <section>
+		<section id="Arquitectura">
+			<h2 class="vertical-center">Arquitectura</h2>
+		</section>
+		<section id="Arquitectura-DissenyGrafic">
+			<h3>Arquitectura: Disseny gràfic</h3>
+			<div class="half-block">
+				<img src="annex/disseny_login.png" id="arquitectura-presentacio-disseny" class="fit"/>
+			</div>
+			<div class="half-block">
+				<img src="annex/captura-login.png" id="arquitectura-presentacio-resultat" class="fit"/>
+			</div>
+		</section>
+		<section id="Arquitectura-Presentació2">
+			<h3>Arquitectura: Presentació</h3>
+			<img src="annex/disseny_extern.png" class="stretch"/>
+		</section>
+		<section id="Arquitectura-Desplegament">
+			<h3>Arquitectura: Desplegament</h3>
+			<span id="desplegament-max-ombra" class="fragment current-visible absolute-element ombra"></span>
+			<span id="desplegament-protocolsMax-ombra" class="fragment current-visible absolute-element ombra"></span>
+			<span id="desplegament-oauth-ombra" class="fragment current-visible absolute-element ombra"></span>
+			<span id="desplegament-apns-ombra" class="fragment current-visible absolute-element ombra"></span>
+			<span id="desplegament-portals-ombra" class="fragment current-visible absolute-element ombra"></span>
+			<img src="annex/desplegament.png" id="desplegament" class="no-shadow"/>
+		</section>
+		<section id="Arquitectura-Distribució">
+			<h3>Arquitectura: Distribució de l'aplicació</h3>
+			<p>&nbsp;</p>
+			<div class="half-block">
+					<img src="annex/logo-appstore.png" id="logo-appstore" class="no-shadow fit"/>
+			</div>
+			<div class="half-block">
+					<img src="annex/logo-testflight.png" id="" class="no-shadow fit"/>
+			</div>
+			<div class="center-half-block">
+					<img src="annex/usb-cable.png" id="" class="no-shadow fit"/>
+			</div>
+		</section>
+    </section>
+	
+	<!-- Canvi de block -->
+
+    <section id="Demostracio">
+        <h2>Demostració</h2>
+		<video id="video-demo" class="stretch no-shadow fragment fade-in">
+			<source src="annex/video.mp4" type="video/mp4">
+  		</video>
+    </section>
+	
+	<!-- Canvi de block -->
+	
+	<section id="Conclusions">
+        <h2>Conclusions</h2>
+		<ul>
+			<li>L'aplicació està disponible a l'<i>App Store</i>.</li>
+			<li><i>Scrum</i> ha ajudat a ...
+				<ul class="no-list-style">
+					<li>... adaptar-se a les necessitats canviants.</li>
+					<li>... produir un producte millor per a l'usuari.</li>
+				</ul>
+			</li>
+			<li>Gran evolució del producte final (SomUPC).</li>
+			<li>L'aplicació ja s'ha implantat a dues comunitats.</li>
+		</ul>
+		<p>&nbsp;</p>
+		<h3 class="fragment">Línies de futur</h3>
+    </section>
+
+	<!-- Canvi de block -->
+
+    <section id="Gracies">
+        <h2 class="vertical-center">Moltes gràcies per la vostra atenció!</h2>
+    </section>
+</div>
+
+		<!-- final slides -->
+		</div>
+
+		<script src="thirdparty/reveal.js/lib/js/head.min.js"></script>
+		<script src="thirdparty/reveal.js/js/reveal.min.js"></script>
+		<script src="js/jquery-2.0.3.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: false,
+				mouseWheel: true,
+				slideNumber: true,
+				backgroundTransition: 'none',
+
+
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: 960,
+				height: 700,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'thirdparty/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'thirdparty/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'thirdparty/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'thirdparty/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'thirdparty/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'thirdparty/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+			Reveal.addEventListener( 'fragmentshown', function( event ) {
+				var e = event.fragment;
+				if(e.id == "video-demo"){
+					e.play();
+					e.currentTime = 0;
+				}
+				if(e.id == "product-backlog"){
+					$("#scrum-diagram").addClass("scrum-diagram-small");
+				}
+			} );
+			Reveal.addEventListener( 'fragmenthidden', function( event ) {
+				var e = event.fragment;
+				if(e.id == "video-demo"){
+					e.pause();
+				}
+				if(e.id == "product-backlog"){
+					$("#scrum-diagram").removeClass("scrum-diagram-small");
+				}
+			} );
+
+			$(document).ready(function(){
+			    $("table tr:even").addClass("even");
+			});
+		</script>
+
+	</body>
+</html>
+
+
